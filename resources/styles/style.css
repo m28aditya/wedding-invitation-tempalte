@@ -1,0 +1,543 @@
+:root {
+  --poppins: 'Poppins', sans-serif;
+  --playball: 'Playball', cursive;
+  --title: 60px;
+  --border: 20px;
+}
+/* Utilities */
+html {
+  scroll-behavior: smooth;
+}
+
+.title-color{
+  color: burlywood;
+  text-shadow: 1px 1px black;
+}
+
+
+.poppins {
+  font-family: var(--poppins);
+}
+
+.playball {
+  font-family: var(--playball);
+}
+
+.card {
+  border: none;
+}
+
+.border{
+  border-radius: 20px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 20px;
+}
+
+#next {
+  margin: 20px 20px 0;
+  font-size: 40px;
+  text-shadow: 1px 1px white;
+}
+/*Endof Utilities */
+
+/* Header */
+.section-header {  
+  background-color: #00d4ff;
+}
+
+.section-header .header-content{
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-image: url(../images/header.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-header .header-content .header-title {
+  letter-spacing: 2px;
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px white;
+  font-weight: 600;
+}
+
+.section-header .header-content .couple {
+  padding: 5px;
+  font-size: var(--title);
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 400;
+  text-shadow: 1px 1px black;
+}
+/* Endof Header */
+
+/* Body */
+body {
+  background-image: url(../images/body.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+/* Endof Body */
+
+/* Salam */
+.section-salam {
+  background-color: whitesmoke;
+  padding: 50px 0px;
+}
+
+.section-salam .salam-title {
+  font-size: var(--title);
+}
+
+.section-salam .salam-text {
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* Endof Salam */
+
+/* About */
+.section-about {
+  padding: 50px 0;
+}
+
+.section-about .couple-info {
+  background-color: white;
+}
+
+.section-about .couple-info .head-info {
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: auto;
+  letter-spacing: 5px;
+}
+
+.section-about .couple-info .body-info {
+  padding: 5px 0;
+  margin: 0;
+  font-weight: 600;
+}
+/* Endof About */
+
+/* Timestamp */
+.section-timestamp {
+  padding: 50px 0;
+}
+
+.section-timestamp .card {
+  background-color: #1f0d5f;
+  color: whitesmoke;
+  margin: 10px 65px;
+  padding: -10px 10px;
+}
+.section-timestamp .card .time {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.section-timestamp .card .time-details {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* Timestamp */
+
+/* Jadwal */
+.section-jadwal {
+  background-color: whitesmoke;
+  padding: 20px 20px;
+}
+
+.section-jadwal .jadwal-title {
+  font-size: var(--title);
+}
+
+.section-jadwal .jadwal-content {
+  font-size: 20px;
+}
+
+.section-jadwal .jadwal-footer {
+  padding-top: 20px;
+  font-size: 25px;
+}
+.section-jadwal .jadwal-footer-content{  
+  font-size: 14px;
+}
+/* Endof Jadwal */
+
+/* Timeline */
+/* The actual timeline (the vertical ruler) */
+.section-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.section-timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: whitesmoke;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container-timeline {
+  padding: 10px 50px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container-timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #61D4E8;
+  border: 4px solid #2DA1E7;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -12px;
+}
+
+.left::after {
+  right: -13px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* My Timeline */
+.section-timeline-title {
+  padding: 50px 0 0;
+  letter-spacing: 5px;
+  font-size: var(--title);
+  text-shadow: 1px 1px white;
+}
+
+.container-timeline .timeline-date {
+  background: -webkit-gradient(linear, left top, right top, from(#090979), color-stop(2%, #00d4ff), to(#020024));
+  background: linear-gradient(90deg, #090979 0%, #00d4ff 2%, #020024 100%);
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+ /* Endof My Timeline */
+/* Endof Timeline */
+
+/* Videos */
+.section-videos .videos-title{
+  padding: 10px 0;
+  background-color: whitesmoke;
+  text-shadow: 1px 1px black;
+}
+.section-videos .yt-video{
+  margin-top: 10px;
+  background-color: whitesmoke;
+}
+.section-videos iframe{
+  margin: 50px 0;
+  border: none;
+  width: 900px;
+  height: 400px;
+}
+/* Endof Videos */
+
+/* Maps */
+.section-maps{
+  padding: 20px 0;
+}
+.section-maps .maps-title{
+  padding: 10px 0;
+  background-color: whitesmoke;
+  text-shadow: 1px 1px black;
+}
+.section-maps iframe{
+  margin: 10px 0;
+  border: none;
+  width: 900px;
+  height: 400px;
+}
+/* Endof Maps */
+
+/*small device style*/
+@media (max-width: 767px) {
+  
+}
+
+/*extra small device style */
+@media (max-width: 400px) { 
+  .wrapper{
+    overflow-x: hidden
+  }
+  /* Header */
+  .section-header {  
+    background-color: #00d4ff;
+  }
+  
+  .section-header .header-content .header-title {
+    font-size: 30px;
+    margin: 40px 0;
+  }
+  
+  .section-header .header-content .couple {
+    padding: 10px;
+    font-size: 50px;
+  }
+  /* Endof Header */
+
+  /* Salam */
+  .section-salam {
+  padding: 20px 0px;
+  }
+
+  .section-salam .salam-title {
+    font-size: 40px;
+  }
+
+  .section-salam .salam-text {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+  /* Endof Salam */
+
+/* About */
+.section-about {
+  padding: 50px 0;
+}
+
+.section-about .couple-info {
+  background-color: white;
+}
+
+.section-about .couple-info .head-info {
+  padding: 5px 0;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: auto;
+  letter-spacing: 5px;
+}
+
+.section-about .couple-info{
+  margin: 20px;
+}
+
+.section-about .couple-info .body-info {
+  padding: 0px;
+  margin: 0;
+  font-weight: 600;
+}
+/* Endof About */
+
+/* Timestamp */
+.section-timestamp {
+  padding: 10px 0;
+  margin: 5px 10px 0 0;
+}
+
+.section-timestamp .card {
+  background-color: #1f0d5f;
+  color: whitesmoke;
+  margin: 10px 65px;
+  padding: -10px 10px;
+}
+.section-timestamp .card .time {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.section-timestamp .card .time-details {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* Timestamp */
+
+/* Jadwal */
+.section-jadwal {
+  background-color: whitesmoke;
+  padding: 20px 0px;
+}
+
+.section-jadwal .jadwal-title {
+  font-size: 40px;
+}
+
+.section-jadwal .jadwal-content {
+  font-size: 20px;
+  padding: 5px 20px;
+}
+
+.section-jadwal .jadwal-footer {
+  padding: 0px 20px 0;
+}
+.section-jadwal .jadwal-footer-content{  
+  padding: 0 10px;
+}
+/* Endof Jadwal */
+
+/* My Timeline */
+.section-timeline-title {
+  padding: 50px 0 0;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-shadow: 1px 1px white;
+}
+
+.container-timeline .timeline-date {
+  background: -webkit-gradient(linear, left top, right top, from(#090979), color-stop(2%, #00d4ff), to(#020024));
+  background: linear-gradient(90deg, #090979 0%, #00d4ff 2%, #020024 100%);
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+.container-timeline .timeline-content{
+  background-color: whitesmoke;
+}
+ /* Endof My Timeline */
+
+  /* Timeline */
+  /* Place the timelime to the left */
+  .section-timeline::after {
+    left: 31px;
+    background-color: whitesmoke;
+  }
+  /* Full-width containers */
+  .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Make sure that all arrows are pointing leftwards */
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 18px;
+  }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+  /* Endof Timeline */
+
+  /* Videos */
+.section-videos .videos-title{
+  padding: 10px 0;
+  background-color: whitesmoke;
+  text-shadow: 1px 1px black;
+}
+.section-videos .yt-video{
+  margin-top: 10px;
+  background-color: whitesmoke;
+}
+.section-videos iframe{
+  border: none;
+  width: 300px;
+  height: 300px;
+}
+/* Endof Videos */
+
+/* Maps */
+.section-maps{
+  padding: 20px 0;
+}
+.section-maps .maps-title{
+  padding: 10px 0;
+  background-color: whitesmoke;
+  text-shadow: 1px 1px black;
+}
+.section-maps iframe{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: none;
+  width: 300px;
+  height: 300px;
+}
+/* Endof Maps */
+
+.section-footer{
+  margin-bottom: 40px;
+}
+}
+
+/*# sourceMappingURL=main.css.map */
+
