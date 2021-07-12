@@ -4,7 +4,46 @@
   --title: 60px;
   --border: 20px;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Utilities */
+/* .wrapper{
+  display: none;
+} */
+.loader-bg{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999999;
+  background-color: #020024;
+}
+
+.loader-bg .loader{
+  height: 100px;
+  width: 100px;
+  border: 15px solid gray;
+  border-top-color: #020024;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 50%;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,17 +90,17 @@ html {
 
 /* Header */
 .section-header {  
-  background-color: #00d4ff;
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, 1),rgba(0,0,0,0)),url(../images/header.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .section-header .header-content{
   padding-top: 20px;
   padding-bottom: 60px;
-  background-image: url(../images/header.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
 }
 
 .section-header .header-content .header-title {
@@ -84,12 +123,13 @@ html {
 
 /* Body */
 body {
-  background-image: url(../images/body.jpg);
+  background-image: linear-gradient(10deg,rgba(0, 0, 0, 1),rgba(0,0,0,0)),url(../images/body.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: hidden;
+
 }
 /* Endof Body */
 
@@ -339,136 +379,136 @@ body {
 
 /*extra small device style */
 @media (max-width: 400px) { 
-  .wrapper{
-    overflow-x: hidden
+    .wrapper{
+      overflow-x: hidden
+    }
+    /* Header */
+    .section-header {  
+      background-color: #00d4ff;
+    }
+    
+    .section-header .header-content .header-title {
+      font-size: 30px;
+      margin: 40px 0;
+    }
+    
+    .section-header .header-content .couple {
+      padding: 10px;
+      font-size: 50px;
+    }
+    /* Endof Header */
+
+    /* Salam */
+    .section-salam {
+    padding: 20px 0px;
+    }
+
+    .section-salam .salam-title {
+      font-size: 40px;
+    }
+
+    .section-salam .salam-text {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    /* Endof Salam */
+
+  /* About */
+  .section-about {
+    padding: 50px 0;
   }
-  /* Header */
-  .section-header {  
-    background-color: #00d4ff;
+
+  .section-about .couple-info {
+    background-color: white;
   }
-  
-  .section-header .header-content .header-title {
+
+  .section-about .couple-info .head-info {
+    padding: 5px 0;
+    font-weight: 600;
     font-size: 30px;
-    margin: 40px 0;
-  }
-  
-  .section-header .header-content .couple {
-    padding: 10px;
-    font-size: 50px;
-  }
-  /* Endof Header */
-
-  /* Salam */
-  .section-salam {
-  padding: 20px 0px;
+    margin-bottom: auto;
+    letter-spacing: 5px;
   }
 
-  .section-salam .salam-title {
+  .section-about .couple-info{
+    margin: 20px;
+  }
+
+  .section-about .couple-info .body-info {
+    padding: 0px;
+    margin: 0;
+    font-weight: 600;
+  }
+  /* Endof About */
+
+  /* Timestamp */
+  .section-timestamp {
+    padding: 10px 0;
+    margin: 5px 10px 0 0;
+  }
+
+  .section-timestamp .card {
+    background-color: #1f0d5f;
+    color: whitesmoke;
+    margin: 10px 65px;
+    padding: -10px 10px;
+  }
+  .section-timestamp .card .time {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .section-timestamp .card .time-details {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  /* Timestamp */
+
+  /* Jadwal */
+  .section-jadwal {
+    background-color: whitesmoke;
+    padding: 20px 0px;
+  }
+
+  .section-jadwal .jadwal-title {
     font-size: 40px;
   }
 
-  .section-salam .salam-text {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .section-jadwal .jadwal-content {
+    font-size: 20px;
+    padding: 5px 20px;
   }
-  /* Endof Salam */
 
-/* About */
-.section-about {
-  padding: 50px 0;
-}
+  .section-jadwal .jadwal-footer {
+    padding: 0px 20px 0;
+  }
+  .section-jadwal .jadwal-footer-content{  
+    padding: 0 10px;
+  }
+  /* Endof Jadwal */
 
-.section-about .couple-info {
-  background-color: white;
-}
+  /* My Timeline */
+  .section-timeline-title {
+    padding: 50px 0 0;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-shadow: 1px 1px white;
+  }
 
-.section-about .couple-info .head-info {
-  padding: 5px 0;
-  font-weight: 600;
-  font-size: 30px;
-  margin-bottom: auto;
-  letter-spacing: 5px;
-}
-
-.section-about .couple-info{
-  margin: 20px;
-}
-
-.section-about .couple-info .body-info {
-  padding: 0px;
-  margin: 0;
-  font-weight: 600;
-}
-/* Endof About */
-
-/* Timestamp */
-.section-timestamp {
-  padding: 10px 0;
-  margin: 5px 10px 0 0;
-}
-
-.section-timestamp .card {
-  background-color: #1f0d5f;
-  color: whitesmoke;
-  margin: 10px 65px;
-  padding: -10px 10px;
-}
-.section-timestamp .card .time {
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.section-timestamp .card .time-details {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-/* Timestamp */
-
-/* Jadwal */
-.section-jadwal {
-  background-color: whitesmoke;
-  padding: 20px 0px;
-}
-
-.section-jadwal .jadwal-title {
-  font-size: 40px;
-}
-
-.section-jadwal .jadwal-content {
-  font-size: 20px;
-  padding: 5px 20px;
-}
-
-.section-jadwal .jadwal-footer {
-  padding: 0px 20px 0;
-}
-.section-jadwal .jadwal-footer-content{  
-  padding: 0 10px;
-}
-/* Endof Jadwal */
-
-/* My Timeline */
-.section-timeline-title {
-  padding: 50px 0 0;
-  letter-spacing: 5px;
-  font-size: 20px;
-  text-shadow: 1px 1px white;
-}
-
-.container-timeline .timeline-date {
-  background: -webkit-gradient(linear, left top, right top, from(#090979), color-stop(2%, #00d4ff), to(#020024));
-  background: linear-gradient(90deg, #090979 0%, #00d4ff 2%, #020024 100%);
-  font-weight: 600;
-  font-size: 20px;
-  color: white;
-}
-.container-timeline .timeline-content{
-  background-color: whitesmoke;
-}
- /* Endof My Timeline */
+  .container-timeline .timeline-date {
+    background: -webkit-gradient(linear, left top, right top, from(#090979), color-stop(2%, #00d4ff), to(#020024));
+    background: linear-gradient(90deg, #090979 0%, #00d4ff 2%, #020024 100%);
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+  }
+  .container-timeline .timeline-content{
+    background-color: whitesmoke;
+  }
+  /* Endof My Timeline */
 
   /* Timeline */
   /* Place the timelime to the left */
@@ -499,44 +539,44 @@ body {
   }
   /* Endof Timeline */
 
-  /* Videos */
-.section-videos .videos-title{
-  padding: 10px 0;
-  background-color: whitesmoke;
-  text-shadow: 1px 1px black;
-}
-.section-videos .yt-video{
-  margin-top: 10px;
-  background-color: whitesmoke;
-}
-.section-videos iframe{
-  border: none;
-  width: 300px;
-  height: 300px;
-}
-/* Endof Videos */
+    /* Videos */
+  .section-videos .videos-title{
+    padding: 10px 0;
+    background-color: whitesmoke;
+    text-shadow: 1px 1px black;
+  }
+  .section-videos .yt-video{
+    margin-top: 10px;
+    background-color: whitesmoke;
+  }
+  .section-videos iframe{
+    border: none;
+    width: 300px;
+    height: 300px;
+  }
+  /* Endof Videos */
 
-/* Maps */
-.section-maps{
-  padding: 20px 0;
-}
-.section-maps .maps-title{
-  padding: 10px 0;
-  background-color: whitesmoke;
-  text-shadow: 1px 1px black;
-}
-.section-maps iframe{
-  margin-top: 10px;
-  margin-bottom: 30px;
-  border: none;
-  width: 300px;
-  height: 300px;
-}
-/* Endof Maps */
+  /* Maps */
+  .section-maps{
+    padding: 20px 0;
+  }
+  .section-maps .maps-title{
+    padding: 10px 0;
+    background-color: whitesmoke;
+    text-shadow: 1px 1px black;
+  }
+  .section-maps iframe{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+    width: 300px;
+    height: 300px;
+  }
+  /* Endof Maps */
 
-.section-footer{
-  margin-bottom: 40px;
-}
+  footer .section-footer{
+    margin-bottom: 10vh;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
